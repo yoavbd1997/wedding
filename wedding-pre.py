@@ -6,6 +6,11 @@ import random
 import string
 from tkinter import simpledialog
 
+
+
+#left click can select row, right click remove the selected row
+
+
 #write the name of your database
 db = 'try.db'
 
@@ -197,7 +202,7 @@ root.configure(bg="#f4f4f4")
 # Input Fields
 today_date = datetime.today().strftime('%Y-%m-%d')
 
-headline_label = tk.Label(root, text="החתונה של יואב ומאיה 17.12.25", font=('Arial', 22, "bold"), fg="#333333", bg="#f4f4f4")
+headline_label = tk.Label(root, text="Wedding", font=('Arial', 22, "bold"), fg="#333333", bg="#f4f4f4")
 headline_label.pack(pady=12)
 
 # Date Label and Entry
@@ -208,7 +213,7 @@ date_entry.pack(pady=5)
 
 tk.Label(root, text=":קטגוריה", bg="#f4f4f4", font=font_style).pack(pady=5)
 category_combobox = ttk.Combobox(root, values=["מקום אירוע", "מקדמה אירוע", "אלכוהול", "שמלה", "צלם", "דיגיי", "צלם מגנטים",
-                                               "חליפה", "עיצוב חתונה", "רב", "אקום לחתונה", "נגן סקסופון", "עיצוב שיער",
+                                               "חליפה", "עיצוב חתונה", "רב", "אקום לחתונה", "נגן", "עיצוב שיער",
                                                "איפור", "רבנות", "אישורי הגעה", "התארגנות"], font=font_style)
 category_combobox.pack(pady=5)
 
@@ -280,7 +285,7 @@ category_frame.pack(pady=7)
 category_total_button = tk.Button(category_frame, text="הצג סך כל ההוצאה עבור קטגוריה", command=lambda: calculate_category_total(category_combobox2.get()), font=font_style, bg="#d1e7dd")
 category_total_button.pack(side=tk.LEFT, padx=5)
 category_combobox2 = ttk.Combobox(category_frame, values=["מקום אירוע", "מקדמה אירוע", "אלכוהול", "שמלה", "צלם", "דיגיי", "צלם מגנטים", "חליפה",
-                                                          "עיצוב חתונה", "רב", "אקום לחתונה", "נגן סקסופון",
+                                                          "עיצוב חתונה", "רב", "אקום לחתונה", "נגן",
                                                           "עיצוב שיער", "איפור", "רבנות", "אישורי הגעה", "התארגנות"], font=font_style)
 category_combobox2.pack(side=tk.LEFT, padx=5)
 tk.Label(category_frame, text=":בחר קטגוריה לבדיקה", bg="#f4f4f4", font=font_style).pack(side=tk.LEFT, pady=5)
